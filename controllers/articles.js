@@ -65,7 +65,11 @@ const updateArticle = async( req, res = response ) => {
             user: uid
         }
 
-        const updatedArticle = await Article.findByIdAndUpdate( eventoId, newArticle, { new: true } );
+        const updatedArticle = await Article.findByIdAndUpdate( 
+            eventoId, 
+            newArticle, 
+            { new: true } //* ESTO ES PARA QUE EN POSMAN VEA LOS CAMBIOS CON EL 1ER SEND
+        );
 
         res.json({
             ok: true,
@@ -102,7 +106,7 @@ const deleteArticle = async( req, res = response ) => {
         if ( article.user.toString() !== uid ) {
             return res.status(401).json({
                 ok: false,
-                msg: 'Necesita autorización para editar esta nota'
+                msg: 'Necesita autorización para borrar esta nota'
             });
         }
 
