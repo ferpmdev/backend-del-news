@@ -22,6 +22,7 @@ const ArticleSchema = Schema({
 
 });
 
+//* PARA PERSONALIZAR LA VISUALIZACION EN POSTMAN
 ArticleSchema.method('toJSON', function() {
     const { __v, _id, ...object } = this.toObject();
     object.id = _id;

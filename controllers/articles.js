@@ -60,16 +60,16 @@ const updateArticle = async( req, res = response ) => {
             });
         }
 
-        const nuevoEvento = {
+        const newArticle = {
             ...req.body,
             user: uid
         }
 
-        const eventoActualizado = await Article.findByIdAndUpdate( eventoId, nuevoEvento, { new: true } );
+        const updatedArticle = await Article.findByIdAndUpdate( eventoId, newArticle, { new: true } );
 
         res.json({
             ok: true,
-            article: eventoActualizado
+            article: updatedArticle
         });
 
         
