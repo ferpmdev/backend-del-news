@@ -32,7 +32,7 @@ const createArticle = async ( req, res = response ) => {
         console.log(error)
         res.status(500).json({
             ok: false,
-            msg: 'Hable con el administrador'
+            msg: 'Comunicarse con el departamento de atención al cliente'
         });
     }
 }
@@ -77,7 +77,7 @@ const updateArticle = async( req, res = response ) => {
         console.log(error);
         res.status(500).json({
             ok: false,
-            msg: 'Hable con el administrador'
+            msg: 'Comunicarse con el departamento de atención al cliente'
         });
     }
 
@@ -116,7 +116,7 @@ const deleteArticle = async( req, res = response ) => {
         console.log(error);
         res.status(500).json({
             ok: false,
-            msg: 'Hable con el administrador'
+            msg: 'Comunicarse con el departamento de atención al cliente'
         });
     }
 

@@ -7,7 +7,7 @@ const createJWT = ( uid, name ) => {
         const payload = { uid, name };
 
         jwt.sign( payload, process.env.SECRET_QUESTION_JWT, {
-            expiresIn: '1h'
+            expiresIn: '72h'
         }, (err, token ) => {
 
             if ( err ){
