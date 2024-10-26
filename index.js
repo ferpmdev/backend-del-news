@@ -11,7 +11,7 @@ app.use( express.json() );
 
 //* ROUTES
 app.use('/api/auth', require('./routes/auth') );
-// TODO: CRUD: Eventos
+app.use('/api/articles', require('./routes/articles') );
 
 app.listen( process.env.PORT, () => {
     console.log(`Servidor corriendo en puerto ${ process.env.PORT }`);
