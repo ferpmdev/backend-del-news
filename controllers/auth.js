@@ -91,10 +91,14 @@ const loginUser = async(req, res = response ) => {
 
 const confirmToken = async (req, res = response ) => {
 
-    const token = await createJWT( req.uid, req.name );
+    const { uid, name } = req
+
+    const token = await createJWT( uid, name );
 
     res.json({
         ok: true,
+        uid,
+        name,
         token
     })
 }
