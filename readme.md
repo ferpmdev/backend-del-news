@@ -22,17 +22,16 @@ Este proyecto implementa un backend Node.js con Express para gestionar un CRUD (
 ### Instalación y Ejecución
 
 1. **Clonar el repositorio:** `git clone https://github.com/ferpmdev/backend-del-news.git`
-2. Ejecuta `cd newsFront`
-3. Ejecuta `cd backend-del-news`
-4. Verifica que te encuentras sobre la rama master.
-5. **Configurar la base de datos:** Crear una base de datos MongoDB y configurar las credenciales en `config/config.json`.
-6. Crea en la raíz del proyecto un archivo llamado `.env` con las siguientes claves: 
+2. Ejecuta `cd backend-del-news`
+3. Verifica que te encuentras sobre la rama master.
+4. **Crear la base de datos:** Crear una base de datos MongoDB.
+5. **Configurar las variables de entorno:** Crea en la raíz del proyecto un archivo llamado `.env` con lo siguiente: 
 - `PORT=4000`
 - `DB_CONNECT=`
 - `SECRET_QUESTION_JWT=`
-Deberas completar con los valores obtenidos del paso anterior las claves `DB_CONNECT` y `SECRET_QUESTION_JWT=` de acuerdo a los datos de la base de datos que creaste.
-7. **Instalar dependencias:** `npm install`
-8. **Iniciar el servidor:** `npm run dev`
+Completar con los valores obtenidos del paso anterior las claves `DB_CONNECT` y `SECRET_QUESTION_JWT=` de acuerdo a los datos de la base de datos que creaste.
+6. **Instalar dependencias:** Comprueba que en tu equipo tengas ya instalado node(v18.12.1 o superior), nodemon(3.1.4 o superior) y npm(8.19.2 o superior), de lo contrario deberas instalarlo. Luego, instala las dependencias ejecutando: `npm i`
+7. **Iniciar el servidor:** Verifica que estes registrado en un equipo como administrador y ejecuta `npm run dev`.
 
 ### Endpoints
 
